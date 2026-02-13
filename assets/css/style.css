@@ -8,7 +8,7 @@
     --bs-gutter-x: 10px !important; 
 }
 
-.container, .container-fluid {
+.container {
     padding-right: 10px !important;
     padding-left: 10px !important;
 }
@@ -37,7 +37,7 @@
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
     border: none;
-    padding: 10px 24px;
+    padding: 7px 24px;
     transition: all 0.3s ease;
 }
 
@@ -81,7 +81,7 @@
 .breadcrumb-item a {
     font-size: 13px;
     line-height: 18px;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif !important;
     color: #198754;
     text-decoration: none;
 }
@@ -244,13 +244,11 @@ blockquote footer {
 
 /* --- Important Disclaimer Style --- */
 .disclaimer-box {
-    background-color: #fff9f0;
-    border-left: 5px solid #ffc107;
     border-radius: 12px;
     padding: 1.5rem;
     margin: 3rem auto;
     width: 100%;
-    max-width: 800px;
+    max-width: 640px;
 }
 
 .disclaimer-box h6 {
@@ -383,6 +381,8 @@ footer h6 {
     color: #1a1a1a;
 }
 
+
+
 .footer-bottom-links a {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
@@ -393,12 +393,36 @@ footer h6 {
 }
 
 .footer-bottom-links a:hover {
-    color: #198754;
+    color: #81BE42;
     text-decoration: underline;
 }
 
+.social-btn {
+    width: 40px !important;
+    height: 40px !important;
+    display: inline-flex !important;
+    background-image: linear-gradient(#81BE42, #42A7BE) !important;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out !important; 
+    border-radius: 50% !important;
+}
+
+.social-btn:hover {
+    background-color: #81BE42 !important;
+    border-color: #81BE42 !important;
+    color: white !important;
+    transform: translateY(-3px); 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
 .download-list a:hover {
-    color: #198754;
+    color: #81BE42;
     border-color: #198754;
 }
 
@@ -571,19 +595,4 @@ h6,
         margin-top: 10px;
         font-size: 25px !important;
     }
-}
-
-/* Universal Arrow Class for Sidebar & Footer */
-.list-arrow li a::before {
-    content: ">";
-    color: #198754;
-    font-weight: bold;
-    margin-right: 8px;
-    display: inline-block;
-    transition: transform 0.3s ease;
-}
-
-.list-arrow li a:hover::before {
-    transform: translateX(3px);
-    color: #81BE42;
 }
