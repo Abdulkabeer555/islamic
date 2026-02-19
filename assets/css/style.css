@@ -920,6 +920,10 @@ body {
         margin-bottom: 15px;
     }
 
+    .experience-box {
+        max-width: 100% !important;
+    }
+
     .btn-book-now {
         margin-top: 10px;
         font-size: 30px !important;
@@ -1002,13 +1006,15 @@ body {
     }
 
        .footer-logo-text {
-        font-size: 12px;
+        font-size: 11px;
     }
     .footer-bottom-links {
         gap: 6px !important;
     }
+
+
     .footer-bottom-links a {
-        font-size: 10px;
+        font-size: 9px;
     }
 
 }
