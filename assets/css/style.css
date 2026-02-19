@@ -1006,7 +1006,7 @@ body {
     }
 
        .footer-logo-text {
-        font-size: 11px;
+        font-size: 12px;
     }
     .footer-bottom-links {
         gap: 6px !important;
@@ -1014,7 +1014,7 @@ body {
 
 
     .footer-bottom-links a {
-        font-size: 9px;
+        font-size: 10px;
     }
 
 }
