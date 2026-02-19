@@ -194,8 +194,8 @@ h6 {
 }
 
 .my-sidebar .card {
-    border-radius: 30px; 
-    box-shadow: inset 0 0 15px #81BE4280, 0 4px 15px rgba(0,0,0,0.05); 
+    border-radius: 30px;
+    box-shadow: inset 0 0 15px #81BE4280, 0 4px 15px rgba(0, 0, 0, 0.05);
     border: 1px solid rgba(126, 179, 68, 0.3);
     background-color: #fff;
 }
@@ -551,20 +551,21 @@ footer h5 {
 .footer-quote i {
     font-size: 1.7rem;
     position: absolute;
-    left: -10px; top: -10px;
+    left: -10px;
+    top: -10px;
 }
 
 .footer-quote p {
-    font-size: 22px; 
-    line-height: 35px; 
-    font-family: 'Playfair Display' , serif; 
+    font-size: 22px;
+    line-height: 35px;
+    font-family: 'Playfair Display', serif;
     font-weight: 500;
 }
 
 .footer-quote span {
-    font-size: 16px; 
-    line-height: 26px; 
-    font-family: Poppins , sans-serif; 
+    font-size: 16px;
+    line-height: 26px;
+    font-family: Poppins, sans-serif;
     font-weight: 400
 }
 
@@ -630,6 +631,7 @@ body {
     .nav-item .nav-link {
         font-size: 13px;
     }
+
     .appointment-banner p {
         max-width: 550px;
     }
@@ -657,7 +659,7 @@ body {
         transform: translateY(0);
     }
 
-        .my-sidebar {
+    .my-sidebar {
         height: auto;
         overflow: visible;
         padding-bottom: 20px;
@@ -675,9 +677,10 @@ body {
         font-size: 30px;
     }
 
-.testimonial-box i {
-    left: 50px !important;
-}
+    .testimonial-box i {
+        left: 50px !important;
+    }
+
     .navbar-brand img {
         height: 40px;
     }
@@ -734,7 +737,7 @@ body {
         padding: 1.5rem !important;
     }
 
-     .blockquote-layout {
+    .blockquote-layout {
         max-width: 100% !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
@@ -759,11 +762,13 @@ body {
         padding-right: 0px !important;
     }
 
-    img-fluid, .ruqyah-service-banner {
+    img-fluid,
+    .ruqyah-service-banner {
         width: 100% !important;
         margin: 15px 0 !important;
         border-radius: 12px;
     }
+
     .article-title {
         font-size: 48px !important;
         line-height: 58px !important;
@@ -872,13 +877,15 @@ body {
         margin-top: 10px;
         font-size: 33px !important;
     }
-    
+
     .footer-logo-text {
         font-size: 16px;
     }
+
     .footer-bottom-links {
         gap: 8px !important;
     }
+
     .footer-bottom-links a {
         font-size: 14px;
     }
@@ -889,7 +896,7 @@ body {
     .brand-text {
         font-size: 20px !important;
     }
-    
+
     .blockquote-layout i {
         font-size: 25px !important;
         left: 3px !important;
@@ -934,10 +941,10 @@ body {
         margin-right: auto !important;
         max-width: 100%;
     }
- 
+
     .footer-quote {
-        margin-left:  auto;
-        margin-right:  auto;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .footer-quote i {
@@ -958,12 +965,14 @@ body {
     }
 
 
-       .footer-logo-text {
+    .footer-logo-text {
         font-size: 14px;
     }
+
     .footer-bottom-links {
         gap: 5px !important;
     }
+
     .footer-bottom-links a {
         font-size: 12px;
     }
@@ -1005,18 +1014,23 @@ body {
         margin-top: 0px !important;
     }
 
-       .footer-logo-text {
-        font-size: 12px;
-        white-space: nowrap !important;
-
+    .footer-img {
+        margin-right: 4px !important;
+        flex-shrink: 0;
     }
+
+    .footer-logo-text {
+        font-size: 11px;
+        white-space: nowrap !important;
+    }
+
     .footer-bottom-links {
-        gap: 6px !important;
+        gap: 5px !important;
     }
 
 
     .footer-bottom-links a {
-        font-size: 10px;
+        font-size: 9px;
     }
 
 }
