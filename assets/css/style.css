@@ -874,13 +874,13 @@ body {
     }
     
     .footer-logo-text {
-        font-size: 14px;
+        font-size: 16px;
     }
     .footer-bottom-links {
         gap: 8px !important;
     }
     .footer-bottom-links a {
-        font-size: 12px;
+        font-size: 14px;
     }
 }
 
@@ -952,18 +952,15 @@ body {
         gap: 10px !important;
     }
 
-    .footer-img  {
-        width: 32px;
-    }
 
        .footer-logo-text {
-        font-size: 11px;
+        font-size: 14px;
     }
     .footer-bottom-links {
         gap: 5px !important;
     }
     .footer-bottom-links a {
-        font-size: 9px;
+        font-size: 12px;
     }
 
 }
@@ -987,8 +984,7 @@ body {
 
     .blockquote-layout p {
         font-size: 20px !important;
-        line-height: 24px !important;
-        text-align: justify;
+        line-height: 28px !important;
     }
 
     .blog-image-wrapper {
@@ -1005,13 +1001,13 @@ body {
     }
 
        .footer-logo-text {
-        font-size: 10px;
+        font-size: 12px;
     }
     .footer-bottom-links {
-        gap: 4px !important;
+        gap: 6px !important;
     }
     .footer-bottom-links a {
-        font-size: 7px;
+        font-size: 10px;
     }
 
 }
