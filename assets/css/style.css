@@ -1007,6 +1007,8 @@ body {
 
        .footer-logo-text {
         font-size: 12px;
+        white-space: nowrap !important;
+
     }
     .footer-bottom-links {
         gap: 6px !important;
