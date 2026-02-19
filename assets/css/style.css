@@ -950,8 +950,8 @@ body {
 
     .footer-bottom {
         gap: 10px !important;
+        justify-content: center !important;
     }
-
 
        .footer-logo-text {
         font-size: 14px;
