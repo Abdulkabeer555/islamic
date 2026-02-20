@@ -3,6 +3,55 @@
     padding: 0;
 }
 
+.share-title {
+    font-size: 24px;
+    color: #1a1a1a;
+    font-weight: 300;
+    font-family: 'Playfair Display', serif;
+}
+
+.share-section hr {
+    border: 0;
+    border-top: 1px solid #64bd62;
+    opacity: 1;
+    margin-bottom: 20px;
+}
+
+.share-section a {
+    font-size: 36px;
+    text-decoration: none;
+    line-height: 1;
+    display: inline-block;
+}
+
+.fb-btn {
+    color: #3b5998;
+}
+
+.tw-btn {
+    color: #00aced;
+}
+
+.pin-btn {
+    color: #cb2027;
+}
+
+.red-btn {
+    color: #ff4500;
+}
+
+.ln-btn {
+    color: #007bb5;
+}
+
+.em-btn {
+    color: #7f7f7f;
+}
+
+.share-section a:hover {
+    opacity: 0.8;
+}
+
 :root {
     --brand-green: #7eb344;
     --bs-gutter-x: 10px !important;
@@ -620,11 +669,16 @@ body {
 
 @media (min-width: 992px) and (max-width: 1200px) {
 
-    .disclaimer-box,
     .blockquote-layout {
         margin-left: auto !important;
+        margin-right: 15% !important;
+        max-width: 100% !important;
+    }
+
+    .disclaimer-box {
+        margin-left: auto !important;
         margin-right: 29% !important;
-        max-width: 50% !important;
+        max-width: 50%;
     }
 
 
@@ -739,9 +793,13 @@ body {
 
     .blockquote-layout {
         max-width: 100% !important;
-        margin-left: 0 !important;
+        margin-left: 120px !important;
         margin-right: 0 !important;
         padding: 20px !important;
+    }
+
+    .blockquote-layout i {
+        left: 0px !important;
     }
 
     .testimonial-box p {
@@ -769,6 +827,14 @@ body {
         border-radius: 12px;
     }
 
+    .experience-box {
+        max-width: 100% !important;
+    }
+
+    .my-sidebar .card p {
+        max-width: 100%;
+    }
+
     .article-title {
         font-size: 48px !important;
         line-height: 58px !important;
@@ -780,6 +846,12 @@ body {
         height: auto !important;
         overflow: visible !important;
         margin-bottom: 2rem;
+    }
+
+    .share-section {
+        max-width: 75%;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
 
     .appointment-banner h3 {
@@ -860,9 +932,14 @@ body {
         max-width: 100%;
     }
 
+    .share-section {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        max-width: 100%;
+    }
 
     .blockquote-layout {
-        margin-left: auto !important;
+        margin-left: 40px !important;
         margin-right: auto !important;
         max-width: 60%;
     }
@@ -897,6 +974,11 @@ body {
         font-size: 20px !important;
     }
 
+    .blockquote-layout {
+        margin-right: auto !important;
+        margin-left: auto !important;
+    }
+
     .blockquote-layout i {
         font-size: 25px !important;
         left: 3px !important;
@@ -905,6 +987,7 @@ body {
     .blockquote-layout p {
         font-size: 20px !important;
         line-height: 28px !important;
+
     }
 
     .inside-section-title {
@@ -970,7 +1053,7 @@ body {
 
     .footer-bottom-links {
         gap: 5px !important;
-        margin-bottom: 9px !important;
+        margin-bottom: 10px !important;
     }
 
     .footer-bottom-links a {
