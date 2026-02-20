@@ -12,25 +12,43 @@ document.querySelectorAll('.nav-hover .nav-link').forEach(link => {
         }
     });
 });
-
 document.addEventListener("DOMContentLoaded", function () {
-    const postUrl = encodeURIComponent(window.location.href);
-    const postTitle = encodeURIComponent(document.title);
+    const postUrl = window.location.href; // Native share ke liye encode nahi chahiye
+    const encodedUrl = encodeURIComponent(postUrl);
+    const postTitle = document.title;
+    const encodedTitle = encodeURIComponent(postTitle);
 
     const shareLinks = {
-        facebook: `https://www.facebook.com/sharer/sharer.php?u=${postUrl}`,
-        twitter: `https://twitter.com/intent/tweet?url=${postUrl}&text=${postTitle}`,
-        pinterest: `https://pinterest.com/pin/create/button/?url=${postUrl}&description=${postTitle}`,
-        reddit: `https://www.reddit.com/submit?url=${postUrl}&title=${postTitle}`,
-        linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${postUrl}`,
-        email: `mailto:?subject=${postTitle}&body=Check this out: ${window.location.href}`
+        facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
+        twitter: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`,
+        pinterest: `https://pinterest.com/pin/create/button/?url=${encodedUrl}&description=${encodedTitle}`,
+        reddit: `https://www.reddit.com/submit?url=${encodedUrl}&title=${encodedTitle}`,
+        linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
+        email: `mailto:?subject=${encodedTitle}&body=Check this out: ${postUrl}`
     };
 
     const buttons = document.querySelectorAll('.share-section-js a');
+    
     buttons.forEach(btn => {
         const platform = btn.getAttribute('data-platform');
+
         if (shareLinks[platform]) {
             btn.setAttribute('href', shareLinks[platform]);
         }
+
+        btn.addEventListener('click', function(e) {
+            if (navigator.share) {
+                e.preventDefault();
+                
+                navigator.share({
+                    title: postTitle,
+                    url: postUrl
+                }).then(() => {
+                    console.log('Shared successfully');
+                }).catch((err) => {
+                    window.open(shareLinks[platform], '_blank');
+                });
+            }
+        });
     });
 });
