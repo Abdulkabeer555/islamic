@@ -13,7 +13,7 @@ document.querySelectorAll('.nav-hover .nav-link').forEach(link => {
     });
 });
 document.addEventListener("DOMContentLoaded", function () {
-    const postUrl = window.location.href; // Native share ke liye encode nahi chahiye
+    const postUrl = window.location.href;
     const encodedUrl = encodeURIComponent(postUrl);
     const postTitle = document.title;
     const encodedTitle = encodeURIComponent(postTitle);
