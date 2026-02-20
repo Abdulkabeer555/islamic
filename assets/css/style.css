@@ -960,7 +960,7 @@ body {
     }
 
     .footer-bottom {
-        gap: 5px !important;
+        gap: 20px !important;
         justify-content: center !important;
     }
 
