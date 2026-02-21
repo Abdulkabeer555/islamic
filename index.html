@@ -345,34 +345,37 @@
 
                     <hr />
 
-                    <div class="d-flex gap-3 align-items-center share-section-js">
+                    <div class="d-flex gap-3 align-items-center share-section">
                         <a href="#" title="Share on Facebook"
-                            onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href)); return false;">
+                            onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href)); return false;"
+                            target="_blank">
                             <i class="fab fa-facebook-square fb-btn"></i>
                         </a>
 
                         <a href="#" title="Share on Twitter"
-                            onclick="window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(window.location.href) + '&text=' + encodeURIComponent(document.title)); return false;">
+                            onclick="window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(window.location.href) + '&text=' + encodeURIComponent(document.title)); return false;"
+                            target="_blank">
                             <i class="fab fa-twitter-square tw-btn"></i>
                         </a>
-                        <a target="_blank"
-                            href="https://www.linkedin.com/sharing/share-offsite/?url=<?php echo urlencode('https://yoursite.com/current-page'); ?>"
-                            title="Share on LinkedIn">
+                        <a href="#" title="Share on LinkedIn" onclick="shareLinkedIn(); return false;">
                             <i class="fab fa-linkedin ln-btn"></i>
                         </a>
 
                         <a href="#" title="Share on Reddit"
-                            onclick="window.open('https://www.reddit.com/submit?url=' + encodeURIComponent(window.location.href) + '&title=' + encodeURIComponent(document.title)); return false;">
+                            onclick="window.open('https://www.reddit.com/submit?url=' + encodeURIComponent(window.location.href) + '&title=' + encodeURIComponent(document.title)); return false;"
+                            target="_blank">
                             <i class="fab fa-reddit-square red-btn"></i>
                         </a>
 
                         <a href="#" title="Share on Pinterest"
-                            onclick="window.open('https://pinterest.com/pin/create/button/?url=' + encodeURIComponent(window.location.href)); return false;">
+                            onclick="window.open('https://pinterest.com/pin/create/button/?url=' + encodeURIComponent(window.location.href)); return false;"
+                            target="_blank">
                             <i class="fab fa-pinterest-square pin-btn"></i>
                         </a>
 
                         <a href="#" title="Share via Email"
-                            onclick="window.location.href='mailto:?subject=' + encodeURIComponent(document.title) + '&body=' + encodeURIComponent(window.location.href); return false;">
+                            onclick="window.location.href='mailto:?subject=' + encodeURIComponent(document.title) + '&body=' + encodeURIComponent(window.location.href); return false;"
+                            target="_blank">
                             <i class="fas fa-envelope-square em-btn"></i>
                         </a>
                     </div>
@@ -484,61 +487,67 @@
                 </h2>
 
                 <hr />
+                <div class="d-flex gap-3 align-items-center share-section">
+                    <a href="#" title="Share on Facebook"
+                        onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href)); return false;"
+                        target="_blank">
+                        <i class="fab fa-facebook-square fb-btn"></i>
+                    </a>
 
-              <div class="d-flex gap-3 align-items-center share-section-js">
-                        <a href="#" title="Share on Facebook"
-                            onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href)); return false;">
-                            <i class="fab fa-facebook-square fb-btn"></i>
-                        </a>
+                    <a href="#" title="Share on Twitter"
+                        onclick="window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(window.location.href) + '&text=' + encodeURIComponent(document.title)); return false;"
+                        target="_blank">
+                        <i class="fab fa-twitter-square tw-btn"></i>
+                    </a>
+                    <a target="_blank"
+                        href="https://www.linkedin.com/sharing/share-offsite/?url=<?php echo urlencode('https://yoursite.com/current-page'); ?>"
+                        title="Share on LinkedIn">
+                        <i class="fab fa-linkedin ln-btn"></i>
+                    </a>
 
-                        <a href="#" title="Share on Twitter"
-                            onclick="window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(window.location.href) + '&text=' + encodeURIComponent(document.title)); return false;">
-                            <i class="fab fa-twitter-square tw-btn"></i>
-                        </a>
-                        <a target="_blank"
-                            href="https://www.linkedin.com/sharing/share-offsite/?url=<?php echo urlencode('https://yoursite.com/current-page'); ?>"
-                            title="Share on LinkedIn">
-                            <i class="fab fa-linkedin ln-btn"></i>
-                        </a>
+                    <a href="#" title="Share on Reddit"
+                        onclick="window.open('https://www.reddit.com/submit?url=' + encodeURIComponent(window.location.href) + '&title=' + encodeURIComponent(document.title)); return false;"
+                        target="_blank">
+                        <i class="fab fa-reddit-square red-btn"></i>
+                    </a>
 
-                        <a href="#" title="Share on Reddit"
-                            onclick="window.open('https://www.reddit.com/submit?url=' + encodeURIComponent(window.location.href) + '&title=' + encodeURIComponent(document.title)); return false;">
-                            <i class="fab fa-reddit-square red-btn"></i>
-                        </a>
+                    <a href="#" title="Share on Pinterest"
+                        onclick="window.open('https://pinterest.com/pin/create/button/?url=' + encodeURIComponent(window.location.href)); return false;"
+                        target="_blank">
+                        <i class="fab fa-pinterest-square pin-btn"></i>
+                    </a>
 
-                        <a href="#" title="Share on Pinterest"
-                            onclick="window.open('https://pinterest.com/pin/create/button/?url=' + encodeURIComponent(window.location.href)); return false;">
-                            <i class="fab fa-pinterest-square pin-btn"></i>
-                        </a>
-
-                        <a href="#" title="Share via Email"
-                            onclick="window.location.href='mailto:?subject=' + encodeURIComponent(document.title) + '&body=' + encodeURIComponent(window.location.href); return false;">
-                            <i class="fas fa-envelope-square em-btn"></i>
-                        </a>
-                    </div>
-
-            </div>
-
-
-            <div class="col-12">
-                <div class="mx-auto disclaimer-box">
-
-                    <h5 class="fw-bold mb-2 text-dark">Important Disclaimer</h5>
-
-                    <p class="mb-0">
-                        We cannot share very sensitive details or secrets of ruqyah treatment publicly because it could
-                        be
-                        harmful to people who are possessed and visit our website. Why? If this information is made
-                        public,
-                        some jinns or spellcasters could study it, sometimes without the victim even realizing it, and
-                        use
-                        counter‑measures to protect themselves. This would make it easier for them to continue harming
-                        people.
-                    </p>
+                    <a href="#" title="Share via Email"
+                        onclick="window.location.href='mailto:?subject=' + encodeURIComponent(document.title) + '&body=' + encodeURIComponent(window.location.href); return false;"
+                        target="_blank">
+                        <i class="fas fa-envelope-square em-btn"></i>
+                    </a>
                 </div>
+
             </div>
 
         </div>
+
+
+        <div class="col-12">
+            <div class="mx-auto disclaimer-box">
+
+                <h5 class="fw-bold mb-2 text-dark">Important Disclaimer</h5>
+
+                <p class="mb-0">
+                    We cannot share very sensitive details or secrets of ruqyah treatment publicly because it could
+                    be
+                    harmful to people who are possessed and visit our website. Why? If this information is made
+                    public,
+                    some jinns or spellcasters could study it, sometimes without the victim even realizing it, and
+                    use
+                    counter‑measures to protect themselves. This would make it easier for them to continue harming
+                    people.
+                </p>
+            </div>
+        </div>
+
+    </div>
     </div>
 
     <div class="container w-100">
