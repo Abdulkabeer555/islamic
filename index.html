@@ -348,32 +348,32 @@
                     <div class="d-flex gap-3 align-items-center share-section-js">
                         <a href="#" title="Share on Facebook"
                             onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href)); return false;">
-                            <i class="fab fa-facebook-square"></i>
+                            <i class="fab fa-facebook-square fb-btn"></i>
                         </a>
 
                         <a href="#" title="Share on Twitter"
                             onclick="window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(window.location.href) + '&text=' + encodeURIComponent(document.title)); return false;">
-                            <i class="fab fa-twitter-square"></i>
+                            <i class="fab fa-twitter-square tw-btn"></i>
                         </a>
-
-                        <a href="#" title="Share on LinkedIn"
-                            onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(window.location.href)); return false;">
-                            <i class="fab fa-linkedin"></i>
+                        <a target="_blank"
+                            href="https://www.linkedin.com/sharing/share-offsite/?url=<?php echo urlencode('https://yoursite.com/current-page'); ?>"
+                            title="Share on LinkedIn">
+                            <i class="fab fa-linkedin ln-btn"></i>
                         </a>
 
                         <a href="#" title="Share on Reddit"
                             onclick="window.open('https://www.reddit.com/submit?url=' + encodeURIComponent(window.location.href) + '&title=' + encodeURIComponent(document.title)); return false;">
-                            <i class="fab fa-reddit-square"></i>
+                            <i class="fab fa-reddit-square red-btn"></i>
                         </a>
 
                         <a href="#" title="Share on Pinterest"
                             onclick="window.open('https://pinterest.com/pin/create/button/?url=' + encodeURIComponent(window.location.href)); return false;">
-                            <i class="fab fa-pinterest-square"></i>
+                            <i class="fab fa-pinterest-square pin-btn"></i>
                         </a>
 
                         <a href="#" title="Share via Email"
                             onclick="window.location.href='mailto:?subject=' + encodeURIComponent(document.title) + '&body=' + encodeURIComponent(window.location.href); return false;">
-                            <i class="fas fa-envelope-square"></i>
+                            <i class="fas fa-envelope-square em-btn"></i>
                         </a>
                     </div>
 
@@ -485,37 +485,37 @@
 
                 <hr />
 
-                <div class="d-flex gap-3 align-items-center share-section-js">
-                    <a href="#" title="Share on Facebook"
-                        onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href)); return false;">
-                        <i class="fab fa-facebook-square"></i>
-                    </a>
+              <div class="d-flex gap-3 align-items-center share-section-js">
+                        <a href="#" title="Share on Facebook"
+                            onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href)); return false;">
+                            <i class="fab fa-facebook-square fb-btn"></i>
+                        </a>
 
-                    <a href="#" title="Share on Twitter"
-                        onclick="window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(window.location.href) + '&text=' + encodeURIComponent(document.title)); return false;">
-                        <i class="fab fa-twitter-square"></i>
-                    </a>
+                        <a href="#" title="Share on Twitter"
+                            onclick="window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(window.location.href) + '&text=' + encodeURIComponent(document.title)); return false;">
+                            <i class="fab fa-twitter-square tw-btn"></i>
+                        </a>
+                        <a target="_blank"
+                            href="https://www.linkedin.com/sharing/share-offsite/?url=<?php echo urlencode('https://yoursite.com/current-page'); ?>"
+                            title="Share on LinkedIn">
+                            <i class="fab fa-linkedin ln-btn"></i>
+                        </a>
 
-                    <a href="#" title="Share on LinkedIn"
-                        onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(window.location.href)); return false;">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
+                        <a href="#" title="Share on Reddit"
+                            onclick="window.open('https://www.reddit.com/submit?url=' + encodeURIComponent(window.location.href) + '&title=' + encodeURIComponent(document.title)); return false;">
+                            <i class="fab fa-reddit-square red-btn"></i>
+                        </a>
 
-                    <a href="#" title="Share on Reddit"
-                        onclick="window.open('https://www.reddit.com/submit?url=' + encodeURIComponent(window.location.href) + '&title=' + encodeURIComponent(document.title)); return false;">
-                        <i class="fab fa-reddit-square"></i>
-                    </a>
+                        <a href="#" title="Share on Pinterest"
+                            onclick="window.open('https://pinterest.com/pin/create/button/?url=' + encodeURIComponent(window.location.href)); return false;">
+                            <i class="fab fa-pinterest-square pin-btn"></i>
+                        </a>
 
-                    <a href="#" title="Share on Pinterest"
-                        onclick="window.open('https://pinterest.com/pin/create/button/?url=' + encodeURIComponent(window.location.href)); return false;">
-                        <i class="fab fa-pinterest-square"></i>
-                    </a>
-
-                    <a href="#" title="Share via Email"
-                        onclick="window.location.href='mailto:?subject=' + encodeURIComponent(document.title) + '&body=' + encodeURIComponent(window.location.href); return false;">
-                        <i class="fas fa-envelope-square"></i>
-                    </a>
-                </div>
+                        <a href="#" title="Share via Email"
+                            onclick="window.location.href='mailto:?subject=' + encodeURIComponent(document.title) + '&body=' + encodeURIComponent(window.location.href); return false;">
+                            <i class="fas fa-envelope-square em-btn"></i>
+                        </a>
+                    </div>
 
             </div>
 
