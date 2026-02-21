@@ -14,51 +14,47 @@ document.querySelectorAll('.nav-hover .nav-link').forEach(link => {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    const currentUrl = window.location.href;
-    const origin = window.location.origin;
-    const pageTitle = document.title;
-    
-    const encodedUrl = encodeURIComponent(currentUrl);
-    const encodedTitle = encodeURIComponent(pageTitle);
+    const postUrl = window.location.href;
+    const encodedUrl = encodeURIComponent(postUrl);
+    const postTitle = encodeURIComponent(document.title);
 
-    const logoPath = origin + '/assets/images/logo.png';
-    document.getElementById('og-url')?.setAttribute('content', currentUrl);
-    document.getElementById('og-image')?.setAttribute('content', logoPath);
-    document.getElementById('tw-image')?.setAttribute('content', logoPath);
+    const buttons = document.querySelectorAll('.share-section-js a');
 
-    const shareLinks = {
-        facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
-        twitter: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`,
-        pinterest: `https://pinterest.com/pin/create/button/?url=${encodedUrl}&description=${encodedTitle}`,
-        reddit: `https://www.reddit.com/submit?url=${encodedUrl}&title=${encodedTitle}`,
-        linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
-        email: `mailto:?subject=${encodedTitle}&body=Check this out: ${currentUrl}`
-    };
-
-    const buttons = document.querySelectorAll('[data-platform]');
-    
     buttons.forEach(btn => {
-        const platform = btn.getAttribute('data-platform');
+        btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            const platform = this.getAttribute('data-platform');
+            let shareUrl = "";
 
-        if (shareLinks[platform]) {
-            btn.setAttribute('href', shareLinks[platform]);
-        }
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
-        btn.addEventListener('click', function(e) {
-            if (navigator.share) {
-                e.preventDefault();
-                
-                navigator.share({
-                    title: pageTitle,
-                    text: 'Check this out:',
-                    url: currentUrl
-                }).then(() => {
-                    console.log('Shared successfully');
-                }).catch((err) => {
-                    if(err.name !== 'AbortError') {
-                        window.open(shareLinks[platform], '_blank');
-                    }
-                });
+            switch (platform) {
+                case 'facebook':
+                    shareUrl = isMobile 
+                        ? `fb://facewebmodal/fblink?href=${encodedUrl}` 
+                        : `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`;
+                    break;
+                case 'twitter':
+                    shareUrl = `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${postTitle}`;
+                    break;
+                case 'linkedin':
+                    shareUrl = isMobile
+                        ? `linkedin://shareArticle?mini=true&url=${encodedUrl}`
+                        : `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`;
+                    break;
+                case 'reddit':
+                    shareUrl = `https://www.reddit.com/submit?url=${encodedUrl}&title=${postTitle}`;
+                    break;
+                case 'pinterest':
+                    shareUrl = `https://pinterest.com/pin/create/button/?url=${encodedUrl}&description=${postTitle}`;
+                    break;
+                case 'email':
+                    shareUrl = `mailto:?subject=${postTitle}&body=${encodedUrl}`;
+                    break;
+            }
+
+            if (shareUrl) {
+                window.open(shareUrl, '_blank');
             }
         });
     });
