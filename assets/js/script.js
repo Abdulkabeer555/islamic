@@ -13,14 +13,19 @@ document.querySelectorAll('.nav-hover .nav-link').forEach(link => {
     });
 });
 
-function shareLinkedIn() {
+window.shareLinkedIn = function() {
     const url = encodeURIComponent(window.location.href);
     const appUrl = "linkedin://shareArticle?mini=true&url=" + url;
     const webUrl = "https://www.linkedin.com/sharing/share-offsite/?url=" + url;
 
-    window.location.href = appUrl;
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
-    setTimeout(function() {
-        window.open(webUrl, '_blank');
-    }, 500);
-}
+    if (isMobile) {
+        window.location.href = appUrl;
+        setTimeout(function() {
+            window.open(webUrl, '_blank');
+        }, 600);
+    } else {
+        window.open(webUrl, '_blank', 'width=600,height=400');
+    }
+};
